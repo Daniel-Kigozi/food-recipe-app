@@ -1,0 +1,9 @@
+<h1><%= @food.name %></h1>
+
+<p><strong>Measurement Unit:</strong> <%= @food.measurement_unit %></p>
+<p><strong>Price:</strong> <%= @food.price %></p>
+<p><strong>Quantity:</strong> <%= @food.quantity %></p>
+<p><strong>User:</strong> <%= @food.user.name %></p>
+
+<%= link_to 'Edit', edit_food_path(@food) %> |
+<%= link_to 'Back', foods_path %>
