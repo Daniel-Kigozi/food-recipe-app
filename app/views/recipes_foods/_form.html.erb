@@ -1,0 +1,15 @@
+<%= form_with model: recipe_food, url: recipe_recipe_food_path(@recipe, recipe_food), method: :put, local: true do |f| %>
+    <div class="form-group">
+      <%= f.label :food_id, "Select Food" %>
+      <%= f.collection_select :food_id, @foods, :id, :name, prompt: true, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :quantity, "Quantity" %>
+      <%= f.number_field :quantity, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :price, "Price" %>
+      <%= f.text_field :price, class: "form-control" %>
+    </div>
+    <%= f.submit "Update Ingredient", class: "btn btn-primary" %>
+  <% end %>
