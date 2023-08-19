@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'recipes_foods/index'
+  get 'recipes/index'
   get 'welcome', to: 'pages#welcome'
   get 'about', to: 'pages#about'
  
