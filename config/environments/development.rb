@@ -1,6 +1,7 @@
 require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
+  Rails.application.config.default_url_options[:host] = 'localhost'
 
   config.after_initialize do
     Bullet.enable        = true
