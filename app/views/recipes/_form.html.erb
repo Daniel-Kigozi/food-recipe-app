@@ -1,0 +1,44 @@
+<div class="container mt-1">
+  <div class="row justify-content-center mb-4">
+    <div class="col-md-6">
+      <h2 class="text-center">New Recipe</h2>
+    </div>
+  </div>
+  
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <%= form_with(model: @recipe, url: recipes_path, local: true, class: "custom-form") do |form| %>
+        <div class="form-group">
+          <%= form.label :name, class: "form-label" %>
+          <%= form.text_field :name, class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= form.label :description, class: "form-label" %>
+          <%= form.text_area :description, class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= form.label :cooking_time, class: "form-label" %>
+          <%= form.number_field :cooking_time, class: "form-control", placeholder: "Enter cooking time in hours" %>
+        </div>
+
+        <div class="form-group">
+          <%= form.label :prep_time, class: "form-label" %>
+          <%= form.number_field :preparation_time, class: "form-control", placeholder: "Enter preparation time in hours" %>
+        </div>
+
+        <div class="form-group">
+          <div class="form-check">
+            <%= form.check_box :public, class: "form-check-input" %>
+            <%= form.label :public, class: "form-check-label" %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <%= form.submit "Save Recipe", class: "btn btn-primary btn-block" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
