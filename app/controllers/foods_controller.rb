@@ -1,11 +1,13 @@
 class FoodsController < ApplicationController
   before_action :authenticate_user!
 
+  load_and_authorize_resource
+
   before_action :set_food, only: %i[show edit update destroy]
 
   # GET /foods or /foods.json
   def index
-    @foods = Food.all
+    @foods = Food.includes(:user).all
   end
 
   # GET /foods/1 or /foods/1.json
@@ -17,7 +19,7 @@ class FoodsController < ApplicationController
   end
 
   # GET /foods/1/edit
-  def edit;
+  def edit
     @food = Food.find(params[:id])
   end
 
@@ -71,5 +73,4 @@ class FoodsController < ApplicationController
   def food_params
     params.require(:food).permit(:name, :measurement_unit, :price, :quantity, :user_id)
   end
-end
 end

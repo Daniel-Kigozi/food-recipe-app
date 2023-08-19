@@ -1,0 +1,44 @@
+.public-page-title {
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 3rem;
+  }
+  
+  .recipe-name {
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 30px;
+  }
+  
+  .no-recipes {
+    text-align: center;
+    margin-top: 20px;
+    color: #888;
+  }
+  
+  .recipe-container {
+    display: flex;
+    border: 2px solid #363535;
+    margin-bottom: 10px;
+    padding: 10px;
+    justify-content: center;
+    width: 50%;
+    margin-top: 2rem;
+    margin-left: 22rem;
+    align-items: center;
+  }
+  
+  .recipe-summary {
+    flex: 1;
+    text-align: center;
+    margin-left: 150px;
+    font-size: large;
+    color: rgb(89, 84, 84);
+  }
+  
+  .recipe-author {
+    color: #2a2323;
+    margin: 0;
+    margin-left: 30px;
+    font-size: large;
+  }
