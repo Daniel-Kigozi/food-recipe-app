@@ -1,7 +1,6 @@
 class RecipesController < ApplicationController
   load_and_authorize_resource
 
-
   # GET /recipes/new
   def new
     @recipe = Recipe.find(params[:recipe_id])
@@ -69,9 +68,8 @@ class RecipesController < ApplicationController
   end
 
   private
-    
-    def recipe_food_params
-      params.require(:recipe_food).permit(:recipe_id, :food_id, :quantity)
-    end
-end
 
+  def recipe_food_params
+    params.require(:recipe_food).permit(:recipe_id, :food_id, :quantity)
+  end
+end

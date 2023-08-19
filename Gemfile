@@ -5,12 +5,9 @@ ruby '3.0.0'
 
 gem 'rubocop', '>= 1.0', '< 2.0'
 
-gem 'rspec-rails'
-
 gem 'devise'
 
 gem 'cancancan'
-
 
 gem 'factory_bot_rails', '~> 6.2'
 
